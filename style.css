@@ -1,0 +1,341 @@
+body{
+    max-width: 100%;
+    min-height: 97vh;
+    padding: 0;
+    margin: 0;
+    background-color: #A5C9CA;
+}
+
+
+
+/* ------------------ HEADER CSS ------------------ */
+header{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-height: 2.5rem;
+    font: 1.15rem sans-serif;
+    font-weight: 700;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem;
+    background-color: #395B64;
+}
+.nav img{
+    margin-left: 1.25rem;
+}
+.nav span{
+    color: #131313;
+    margin-left: 0.4rem;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+.nav a:hover{
+    color: #A5C9CA;
+    transition: 0.5s;
+}
+
+
+
+/* ------------------ MAIN CSS ------------------ */
+main{
+    max-width: 100%;
+    min-height: calc(97vh - 3rem);
+}
+.container{
+    position: relative;
+    margin:auto;
+    /* margin-top: 0.7rem; */
+    min-height: 35rem;
+    max-width: 85%;
+    /* background-color: #121212; */
+    color: white;
+    background-image: url(BackgroundPics/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: slider 30s infinite ease-in-out;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    height: 135%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.container h1{
+    position: absolute;
+    top: 0.5rem;
+    left: 2.5rem;
+    color: whitesmoke;
+}
+.container h1 a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+@keyframes slider {
+    0%{background-image: url(BackgroundPics/img1.jpg);}
+    20%{background-image: url(BackgroundPics/pic1.jpg);}
+    40%{background-image: url(BackgroundPics/img2.jpg);}
+    60%{background-image: url(BackgroundPics/pic2.jpg);}
+    80%{background-image: url(BackgroundPics/img3.jpg);}
+    100%{background-image: url(BackgroundPics/pic3.jpg);}
+}
+
+
+
+/* ------------------ SONGS CSS ------------------ */
+.songs{
+    position: absolute;
+    top: 6rem;
+    left: 2.5rem;
+    min-height: 30rem;
+    width: clamp(20% ,55%, 40%);
+    /* background-color: rgba(0 ,0 ,0 ,0.75); */
+}
+.song1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 1rem;
+    width: clamp(14rem, 80%, 16rem);
+    /* background-color: rgba(0,0,0,0.6); */
+    background-color: #314a52;
+    color: #A5C9CA;
+    padding: 0.20rem 2rem;
+    border-radius: 1rem;
+}
+.song1:hover{
+    background: transparent;
+    transition: 0.6s;
+}
+.songs span{
+    margin-left: 1rem;
+    color: white;
+}
+.songs span img{
+    cursor: pointer;
+}
+.song1 .pauseButt{
+    position: absolute;
+    right: 3rem;
+}
+.song1 .playButt{
+    position: absolute;
+    right: 3rem;
+}
+.songs .pauseButt{
+    height: 15px;
+    width: 15px;
+    background-image: url(Icons/pause-solid.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.songs .playButt{
+    height: 15px;
+    width: 15px;
+    background-image: url(Icons/play-solid.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.songs .download{
+    position: absolute;
+    right: 1rem;
+}
+
+/* ------------------ BOX CSS ------------------ */
+.box{
+    height: 24rem;
+    width: clamp(20rem,20%,40rem);
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    right: 4rem;
+    top: 5rem;
+    border-radius: 1rem;
+}
+
+
+/* ------------------ BOX CSS SONG IMAGE CSS ------------------ */
+.box .imgMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87%;
+    width: 100%;
+    /* background-image: url(despacito.img);
+    background-size: cover;
+    background-position: center; */
+    /* filter: blur(10px); */
+}
+.box .imgMain .imgChild{
+    width: 75%;
+    height: 85%;
+    background-image: url(SongsPics/1.despacito.img);
+    background-size: cover;
+    background-position: center;
+    animation: imageSlideSmall 36s infinite linear;
+}
+/* @keyframes imageSlideSmall {
+    0%{background-image: url(SongsPics/1.despacito.img);}
+    9.09%{background-image: url(SongsPics/2.terewastefalak.jpg);}
+    18.18%{background-image: url(SongsPics/3.tuaakdekhle.jpg);}
+    27.27%{background-image: url(SongsPics/4.madilkosamjha.jpg);}
+    36.36%{background-image: url(SongsPics/5.gulaabjaisan.jpg);}
+    45.45%{background-image: url(SongsPics/6.unstoppable.jpg);}
+    54.54%{background-image: url(SongsPics/7.saanjha.jpg);}
+    63.63%{background-image: url(SongsPics/8.Cheques.jpg);}
+    72.72%{background-image: url(SongsPics/9.TereBin.jpg);}
+    81.81%{background-image: url(SongsPics/10.GuliMata.jpg);}
+    90.90%{background-image: url(SongsPics/11.GoneGirl.jpg);}
+    100%{background-image: url(SongsPics/12.YadavBrand2.jpg);}
+} */
+
+.box .imgMain .imgChild:hover{
+    scale: 0.9;
+    transition: 0.6s;
+}
+
+
+/* ------------------ BOX CSS PROGRESS BAR DIV CSS ------------------ */
+.box .progDiv{
+    height: calc(100% - 90%);
+    width: 100%;
+}
+.box .progBarDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .progressBar{
+    width: 80%;
+    height: 20%;
+}
+.progDiv .progIcons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    height: calc(100% - 40%);
+    /* background-color: #fff; */
+    background-color: #395B64;
+    border-radius: 2rem;
+    margin: auto;
+}
+.progIcons .mainPlayButt{
+    width: 17px;
+    height: 17px;
+    background-image: url(Icons/play-solid.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.progIcons .mainPauseButt{
+    width: 17px;
+    height: 17px;
+    background-image: url(Icons/pause-solid.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.progIcons #prev, #next{
+    cursor: pointer;
+}
+
+
+
+
+
+/* ------------------ CSS MEDIA QUERIES RESPONSIVENESS ------------------ */
+@media screen and (max-width : 920px) {
+    .box{
+        width: 19rem;
+    }
+    .container{
+        height: 40rem;
+    }
+}
+@media screen and (max-width : 870px) {
+    .box{
+        right: 2rem;
+    }
+}
+@media screen and (max-width : 790px) {
+    .container{
+        margin-top: 1rem;
+    }
+    .box{
+        left: 3rem;
+        top: 7rem;
+    }
+    .songs{
+        top: 80%;
+    }
+    .container::before{
+        height: 210%;
+    }
+}
+@media screen and (max-width:540px) {
+    .song1 span{
+        margin-left: 0.8rem;
+    }
+    .song1 img{
+        margin-left: -1rem;
+    }
+}
+@media screen and (max-width : 470px) {
+    .box{
+        left: 2rem;
+    }
+}
+@media screen and (max-width : 430px) {
+    .box{
+        left: 1rem;
+    }
+    .nav span{
+        margin-left: 0.1rem;
+    }
+    .nav a{
+        margin-left: 2.5rem;
+    }
+}
+@media screen and (max-width : 420px) {
+    .box{
+        left: 0;
+    }
+    .songs{
+        left: 1rem;
+    }
+}
+
+
+/* RESPONSIVENESS HEIGHTS */
+@media screen and (min-height:780px){
+    .container{
+        top: 0.3rem;
+        height: 44rem;
+    }
+    .songs{
+        top: 65%;
+    }
+}
+@media screen and (min-height:960px){
+    .container{
+        top: 3rem;
+    }
+}
